@@ -1,6 +1,10 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { getColor, getAverageColor } from './utils';
+import {
+  getColor,
+  getAverageColor,
+  getTextColor,
+} from './utils';
 
 const getPercentageRiddle = v =>
   ((v / 200) * 100).toFixed(2);
@@ -66,11 +70,9 @@ const App = () => {
     dataLabels: {
       style: {
         colors: [
-          // TODO: FIX TEXT COLOR FOR DIFFERENT MAXES
-          ({ seriesIndex, dataPointIndex, series }) =>
-            series[seriesIndex][dataPointIndex] > 50
-              ? '#000'
-              : '#fff',
+          getTextColor(200),
+          getTextColor(60),
+          getTextColor(90),
         ],
       },
     },

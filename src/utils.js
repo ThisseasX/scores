@@ -24,6 +24,15 @@ const getAverage = arr => sum(arr) / size(arr);
 const getAverageColor = arr =>
   flow(getAverage, getColor)(arr);
 
+const getTextColor = max => ({
+  seriesIndex,
+  dataPointIndex,
+  series,
+}) =>
+  series[seriesIndex][dataPointIndex] / max > 0.5
+    ? '#000'
+    : '#fff';
+
 export {
   clampHue,
   getColor,
@@ -31,4 +40,5 @@ export {
   getAverage,
   getAverageColor,
   ranges,
+  getTextColor,
 };
