@@ -11,39 +11,35 @@ import {
 } from 'components';
 
 const App = () => (
-  <div>
-    <div>
-      <Box
-        display={'flex'}
-        flexDirection={'column'}
-        alignItems={'center'}
-        pt={4}
-        clone
-      >
-        <Grid direction={'column'} container spacing={4}>
-          <Safari1 />
+  <Box
+    display={'flex'}
+    flexDirection={'column'}
+    alignItems={'center'}
+    pt={4}
+    clone
+  >
+    <Grid direction={'column'} container spacing={4}>
+      <Safari1 />
 
-          <Grid item>
-            <Radio1 />
-          </Grid>
+      <Grid item>
+        <Radio1 />
+      </Grid>
 
-          <Safari2 />
+      <Safari2 />
 
-          <Grid item>
-            <Radio2 />
-          </Grid>
+      <Grid item>
+        <Radio2 />
+      </Grid>
 
-          <Grid item>
-            <PoliceDepartment />
-          </Grid>
+      <Grid item>
+        <PoliceDepartment />
+      </Grid>
 
-          <Grid item>
-            <Safari3 />
-          </Grid>
-        </Grid>
-      </Box>
-    </div>
-  </div>
+      <Grid item>
+        <Safari3 />
+      </Grid>
+    </Grid>
+  </Box>
 );
 
 export default App;
