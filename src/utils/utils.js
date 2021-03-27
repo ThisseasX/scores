@@ -39,7 +39,7 @@ const getTextColor = max => ({
   dataPointIndex,
   series,
 }) =>
-  series[seriesIndex][dataPointIndex] / max > 0.5
+  series[seriesIndex][dataPointIndex] / max > 0.55
     ? '#000'
     : '#fff';
 

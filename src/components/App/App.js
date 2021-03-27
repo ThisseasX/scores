@@ -1,6 +1,14 @@
 import React from 'react';
 import { Box, Grid } from '@material-ui/core';
-import { Safari1, Safari2, Radio1 } from 'components';
+
+import {
+  Safari1,
+  Safari2,
+  Safari3,
+  Radio1,
+  Radio2,
+  PoliceDepartment,
+} from 'components';
 
 const App = () => (
   <div>
@@ -23,6 +31,18 @@ const App = () => (
 
           <Grid item>
             <Safari2 />
+          </Grid>
+
+          <Grid item>
+            <Radio2 />
+          </Grid>
+
+          <Grid item>
+            <PoliceDepartment />
+          </Grid>
+
+          <Grid item>
+            <Safari3 />
           </Grid>
         </Grid>
       </Box>

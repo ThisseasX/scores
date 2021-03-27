@@ -19,14 +19,14 @@ const Safari2 = () => {
       data: getCurrentSeries('riddle'),
     },
     {
-      name: 'ΑΝΤΙΚΕΙΜΕΝΟ',
+      name: 'ΘΕΣΗ',
       data: getCurrentSeries('position'),
     },
   ];
 
   const series2 = [
     {
-      name: 'ΘΕΣΗ',
+      name: 'ΥΠΟΘΕΣΗ',
       data: getCurrentSeries('case'),
     },
   ];
@@ -46,20 +46,21 @@ const Safari2 = () => {
   return (
     <>
       <BarChart
-        id={'chart-safari-1'}
+        id={'chart-safari-2'}
         title={'ΣΑΦΑΡΙ 2'}
         options={options}
         series={series}
         max={240}
         colors={[
-          ({ value }) => getColor(100, 150)(value),
+          ({ value }) => getColor(50, 150)(value),
           ({ value }) => getColor(45, 90)(value),
         ]}
         textColors={[getTextColor(150), getTextColor(90)]}
       />
 
       <BarChart
-        id={'chart-safari-2'}
+        title={'ΥΠΟΘΕΣΗ'}
+        id={'chart-case'}
         options={options2}
         series={series2}
         max={900}
