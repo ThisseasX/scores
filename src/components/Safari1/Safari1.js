@@ -7,6 +7,7 @@ import {
   getTextColor,
   getSeries,
   getLabels,
+  partition,
 } from 'utils';
 
 const getCurrentSeries = getSeries(safari_1);
@@ -16,51 +17,80 @@ const Safari1 = () => {
   const series = [
     {
       name: 'ΓΡΙΦΟΣ',
-      data: getCurrentSeries('riddle'),
+      data: getCurrentSeries('riddle').slice(0, 2),
     },
     {
       name: 'ΑΝΤΙΚΕΙΜΕΝΟ',
-      data: getCurrentSeries('item'),
+      data: getCurrentSeries('item').slice(0, 2),
+    },
+  ];
+
+  const series2 = [
+    {
+      name: 'ΓΡΙΦΟΣ',
+      data: getCurrentSeries('riddle').slice(2),
+    },
+    {
+      name: 'ΑΝΤΙΚΕΙΜΕΝΟ',
+      data: getCurrentSeries('item').slice(2),
     },
     {
       name: 'ΘΕΣΗ',
-      data: [, , , , , , ...getCurrentSeries('position')],
+      data: [
+        ,
+        ,
+        ,
+        ,
+        ...getCurrentSeries('position').slice(2),
+      ],
     },
   ];
 
   const options = {
     xaxis: {
-      categories: [...getCurrentLabels(), 'ΘΕΣΗ'],
+      categories: getCurrentLabels().slice(0, 2),
+    },
+  };
+
+  const options2 = {
+    xaxis: {
+      categories: [...getCurrentLabels().slice(2), 'ΘΕΣΗ'],
     },
   };
 
   return (
-    <BarChart
-      id={'chart-safari-1'}
-      title={'ΣΑΦΑΡΙ 1'}
-      options={options}
-      series={series}
-      max={460}
-      colors={[
-        ({ value }) =>
-          value > 100
-            ? getColor(100, 400)(value)
-            : getColor(30, 100)(value),
-        ({ value }) => getColor(30, 60)(value),
-        ({ value }) => getColor(45, 90)(value),
-      ]}
-      textColors={[
-        props => {
-          const { seriesIndex, dataPointIndex } = props;
+    <>
+      <BarChart
+        id={'chart-safari-1-packs'}
+        title={'ΣΑΦΑΡΙ 1'}
+        options={options}
+        series={series}
+        max={460}
+        colors={[
+          ({ value }) => getColor(100, 400)(value),
+          ({ value }) => getColor(30, 60)(value),
+        ]}
+        textColors={[getTextColor(400), getTextColor(60)]}
+      />
 
-          return seriesIndex === 0 && dataPointIndex < 2
-            ? getTextColor(400)(props)
-            : getTextColor(100)(props);
-        },
-        getTextColor(60),
-        getTextColor(90),
-      ]}
-    />
+      <BarChart
+        id={'chart-safari-1'}
+        title={'ΣΑΦΑΡΙ 1'}
+        options={options2}
+        series={series2}
+        max={160}
+        colors={[
+          ({ value }) => getColor(30, 100)(value),
+          ({ value }) => getColor(30, 60)(value),
+          ({ value }) => getColor(45, 90)(value),
+        ]}
+        textColors={[
+          getTextColor(100),
+          getTextColor(60),
+          getTextColor(90),
+        ]}
+      />
+    </>
   );
 };
 
