@@ -1,0 +1,59 @@
+{
+  "safari_2": [
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 1",
+      "value": 150
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 15
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 2",
+      "value": 125
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 49
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 3",
+      "value": 150
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 46
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 4",
+      "value": 150
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 40
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 5",
+      "value": 150
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 48
+    },
+    {
+      "type": "case",
+      "label": "ΥΠΟΘΕΣΗ",
+      "value": 625
+    }
+  ]
+}

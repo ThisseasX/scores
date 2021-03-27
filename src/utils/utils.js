@@ -1,10 +1,20 @@
-import { flow, clamp, sum, size } from 'lodash/fp';
+import {
+  filter,
+  flow,
+  clamp,
+  sum,
+  size,
+  map,
+  zipAll,
+  max,
+} from 'lodash/fp';
 
 const clampHue = clamp(0, 120);
 
 const getColor = (offset = 0, max = 100) => value => {
+  if (value === max) return `hsl(120, 90%, 50%)`;
   const v = clamp(offset, max, value) - offset;
-  var hue = clampHue((v / (max - offset)) * 120);
+  var hue = clampHue((v / (max - offset)) * 70);
   return `hsl(${hue}, 90%, 50%)`;
 };
 
@@ -33,6 +43,18 @@ const getTextColor = max => ({
     ? '#000'
     : '#fff';
 
+const getPercentageValue = (max, decimalPoints = 0) => v =>
+  ((v / max) * 100).toFixed(decimalPoints);
+
+const findSeriesMax = series =>
+  flow(map('data'), zipAll, map(sum), max)(series);
+
+const getSeries = data => type =>
+  flow(filter({ type }), map('value'))(data);
+
+const getLabels = data => () =>
+  flow(filter({ type: 'riddle' }), map('label'))(data);
+
 export {
   clampHue,
   getColor,
@@ -41,4 +63,8 @@ export {
   getAverageColor,
   ranges,
   getTextColor,
+  getPercentageValue,
+  findSeriesMax,
+  getSeries,
+  getLabels,
 };

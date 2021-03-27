@@ -1,0 +1,69 @@
+{
+  "safari_1": [
+    {
+      "type": "riddle",
+      "label": "PACK 1",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 60
+    },
+    {
+      "type": "riddle",
+      "label": "PACK 2",
+      "value": 400
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 30
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 9",
+      "value": 100
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 30
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 10",
+      "value": 100
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 30
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 11",
+      "value": 100
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 60
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 12",
+      "value": 100
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 60
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 65
+    }
+  ]
+}

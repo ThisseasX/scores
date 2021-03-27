@@ -1,0 +1,139 @@
+{
+  "safari_3": [
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 1",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 60
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 78
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 2",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 45
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 87
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 3",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 60
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 84
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 4",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 60
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 87
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 5",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 40
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 84
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 6",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 30
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 90
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 7",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 40
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 87
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 8",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 60
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 90
+    },
+    {
+      "type": "riddle",
+      "label": "ΓΡΙΦΟΣ 9",
+      "value": 200
+    },
+    {
+      "type": "item",
+      "label": "ΑΝΤ",
+      "value": 0
+    },
+    {
+      "type": "position",
+      "label": "ΘΕΣΗ",
+      "value": 90
+    }
+  ]
+}
