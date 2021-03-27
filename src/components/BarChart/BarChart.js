@@ -6,6 +6,7 @@ import { getAverageColor, findSeriesMax } from 'utils';
 const BarChart = ({
   id = 'basic-bar',
   title,
+  subtitle,
   series,
   max,
   options = {},
@@ -16,6 +17,12 @@ const BarChart = ({
     title: {
       text: title,
       floating: true,
+      align: 'center',
+    },
+
+    subtitle: {
+      text: subtitle,
+      floating: false,
       align: 'center',
     },
 
@@ -81,7 +88,8 @@ const BarChart = ({
           40 *
           (100 / 70) +
         60.61 +
-        (series.length <= 1 ? 3.5 : 0)
+        (series.length <= 1 ? 3.5 : 0) +
+        (subtitle ? 22 : 0)
       }`}
     />
   );

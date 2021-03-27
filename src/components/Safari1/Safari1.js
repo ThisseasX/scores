@@ -7,11 +7,14 @@ import {
   getTextColor,
   getSeries,
   getLabels,
-  partition,
 } from 'utils';
 
 const getCurrentSeries = getSeries(safari_1);
 const getCurrentLabels = getLabels(safari_1);
+const getCurrentPositionLabels = getLabels(
+  safari_1,
+  'position',
+);
 
 const Safari1 = () => {
   const series = [
@@ -34,15 +37,12 @@ const Safari1 = () => {
       name: 'ΑΝΤΙΚΕΙΜΕΝΟ',
       data: getCurrentSeries('item').slice(2),
     },
+  ];
+
+  const series3 = [
     {
       name: 'ΘΕΣΗ',
-      data: [
-        ,
-        ,
-        ,
-        ,
-        ...getCurrentSeries('position').slice(2),
-      ],
+      data: getCurrentSeries('position'),
     },
   ];
 
@@ -54,7 +54,13 @@ const Safari1 = () => {
 
   const options2 = {
     xaxis: {
-      categories: [...getCurrentLabels().slice(2), 'ΘΕΣΗ'],
+      categories: getCurrentLabels().slice(2),
+    },
+  };
+
+  const options3 = {
+    xaxis: {
+      categories: getCurrentPositionLabels(),
     },
   };
 
@@ -63,32 +69,40 @@ const Safari1 = () => {
       <BarChart
         id={'chart-safari-1-packs'}
         title={'ΣΑΦΑΡΙ 1'}
+        subtitle={'PACKS'}
         options={options}
         series={series}
         max={460}
         colors={[
-          ({ value }) => getColor(100, 400)(value),
+          ({ value }) => getColor(200, 400)(value),
           ({ value }) => getColor(30, 60)(value),
         ]}
         textColors={[getTextColor(400), getTextColor(60)]}
       />
 
       <BarChart
-        id={'chart-safari-1'}
+        id={'chart-safari-1-riddles'}
         title={'ΣΑΦΑΡΙ 1'}
+        subtitle={'ΓΡΙΦΟΙ'}
         options={options2}
         series={series2}
         max={160}
         colors={[
           ({ value }) => getColor(30, 100)(value),
           ({ value }) => getColor(30, 60)(value),
-          ({ value }) => getColor(45, 90)(value),
         ]}
-        textColors={[
-          getTextColor(100),
-          getTextColor(60),
-          getTextColor(90),
-        ]}
+        textColors={[getTextColor(100), getTextColor(60)]}
+      />
+
+      <BarChart
+        id={'chart-safari-1-position'}
+        title={'ΣΑΦΑΡΙ 1'}
+        subtitle={'ΘΕΣΗ'}
+        options={options3}
+        series={series3}
+        max={90}
+        colors={[({ value }) => getColor(45, 90)(value)]}
+        textColors={[getTextColor(90)]}
       />
     </>
   );
