@@ -21,17 +21,13 @@ const App = () => (
         clone
       >
         <Grid direction={'column'} container spacing={4}>
-          <Grid item>
-            <Safari1 />
-          </Grid>
+          <Safari1 />
 
           <Grid item>
             <Radio1 />
           </Grid>
 
-          <Grid item>
-            <Safari2 />
-          </Grid>
+          <Safari2 />
 
           <Grid item>
             <Radio2 />

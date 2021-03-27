@@ -1,4 +1,5 @@
 import React from 'react';
+import { Grid } from '@material-ui/core';
 import { BarChart } from 'components';
 import { safari_1 } from 'data/safari_1';
 
@@ -66,44 +67,50 @@ const Safari1 = () => {
 
   return (
     <>
-      <BarChart
-        id={'chart-safari-1-packs'}
-        title={'ΣΑΦΑΡΙ 1'}
-        subtitle={'PACKS'}
-        options={options}
-        series={series}
-        max={460}
-        colors={[
-          ({ value }) => getColor(200, 400)(value),
-          ({ value }) => getColor(30, 60)(value),
-        ]}
-        textColors={[getTextColor(400), getTextColor(60)]}
-      />
+      <Grid item>
+        <BarChart
+          id={'chart-safari-1-packs'}
+          title={'ΣΑΦΑΡΙ 1'}
+          subtitle={'PACKS'}
+          options={options}
+          series={series}
+          max={460}
+          colors={[
+            ({ value }) => getColor(200, 400)(value),
+            ({ value }) => getColor(30, 60)(value),
+          ]}
+          textColors={[getTextColor(400), getTextColor(60)]}
+        />
+      </Grid>
 
-      <BarChart
-        id={'chart-safari-1-riddles'}
-        title={'ΣΑΦΑΡΙ 1'}
-        subtitle={'ΓΡΙΦΟΙ'}
-        options={options2}
-        series={series2}
-        max={160}
-        colors={[
-          ({ value }) => getColor(30, 100)(value),
-          ({ value }) => getColor(30, 60)(value),
-        ]}
-        textColors={[getTextColor(100), getTextColor(60)]}
-      />
+      <Grid item>
+        <BarChart
+          id={'chart-safari-1-riddles'}
+          title={'ΣΑΦΑΡΙ 1'}
+          subtitle={'ΓΡΙΦΟΙ'}
+          options={options2}
+          series={series2}
+          max={160}
+          colors={[
+            ({ value }) => getColor(30, 100)(value),
+            ({ value }) => getColor(30, 60)(value),
+          ]}
+          textColors={[getTextColor(100), getTextColor(60)]}
+        />
+      </Grid>
 
-      <BarChart
-        id={'chart-safari-1-position'}
-        title={'ΣΑΦΑΡΙ 1'}
-        subtitle={'ΘΕΣΗ'}
-        options={options3}
-        series={series3}
-        max={90}
-        colors={[({ value }) => getColor(45, 90)(value)]}
-        textColors={[getTextColor(90)]}
-      />
+      <Grid item>
+        <BarChart
+          id={'chart-safari-1-position'}
+          title={'ΣΑΦΑΡΙ 1'}
+          subtitle={'ΘΕΣΗ'}
+          options={options3}
+          series={series3}
+          max={90}
+          colors={[({ value }) => getColor(45, 90)(value)]}
+          textColors={[getTextColor(90)]}
+        />
+      </Grid>
     </>
   );
 };
