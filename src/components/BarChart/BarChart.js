@@ -7,6 +7,7 @@ const BarChart = ({
   id = 'basic-bar',
   title,
   series,
+  max,
   options = {},
   colors,
   textColors,
@@ -36,7 +37,7 @@ const BarChart = ({
     },
 
     yaxis: {
-      max: findSeriesMax(series),
+      max: max || findSeriesMax(series),
     },
 
     colors,
@@ -76,7 +77,11 @@ const BarChart = ({
       type="bar"
       width={'768'}
       height={`${
-        series[0].data.length * 40 * (100 / 70) + 67.02
+        series[series.length - 1].data.length *
+          40 *
+          (100 / 70) +
+        60.61 +
+        (series.length <= 1 ? 3.5 : 0)
       }`}
     />
   );

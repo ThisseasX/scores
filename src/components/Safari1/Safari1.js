@@ -40,6 +40,7 @@ const Safari1 = () => {
       title={'ΣΑΦΑΡΙ 1'}
       options={options}
       series={series}
+      max={460}
       colors={[
         ({ value }) =>
           value > 100

@@ -12,7 +12,7 @@ import {
 const clampHue = clamp(0, 120);
 
 const getColor = (offset = 0, max = 100) => value => {
-  if (value === max) return `hsl(120, 90%, 50%)`;
+  if (value >= max) return `hsl(120, 90%, 50%)`;
   const v = clamp(offset, max, value) - offset;
   var hue = clampHue((v / (max - offset)) * 70);
   return `hsl(${hue}, 90%, 50%)`;
@@ -52,8 +52,8 @@ const findSeriesMax = series =>
 const getSeries = data => type =>
   flow(filter({ type }), map('value'))(data);
 
-const getLabels = data => () =>
-  flow(filter({ type: 'riddle' }), map('label'))(data);
+const getLabels = (data, type = 'riddle') => () =>
+  flow(filter({ type }), map('label'))(data);
 
 export {
   clampHue,
