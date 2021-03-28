@@ -8,6 +8,8 @@ import {
   Radio1,
   Radio2,
   PoliceDepartment,
+  Photo,
+  Total,
 } from 'components';
 
 const App = () => (
@@ -37,6 +39,14 @@ const App = () => (
 
       <Grid item>
         <Safari3 />
+      </Grid>
+
+      <Grid item>
+        <Photo />
+      </Grid>
+
+      <Grid item>
+        <Total />
       </Grid>
     </Grid>
   </Box>

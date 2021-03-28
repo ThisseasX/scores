@@ -6,3 +6,5 @@ export { default as Safari3 } from './Safari3';
 export { default as Radio1 } from './Radio1';
 export { default as Radio2 } from './Radio2';
 export { default as PoliceDepartment } from './PoliceDepartment';
+export { default as Photo } from './Photo';
+export { default as Total } from './Total';
